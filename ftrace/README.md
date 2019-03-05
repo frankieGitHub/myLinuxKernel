@@ -1,7 +1,10 @@
 # ftrace介绍
 https://www.cnblogs.com/arnoldlu/p/7211249.html
 
-
+## 使用的注意事项：
+1、需要root  
+2、一般的挂载路径：
+/sys/kernel/debug/tracing  
 ## 简单的使用步骤：
 1、turn off  
 echo 0 > traing_on  
