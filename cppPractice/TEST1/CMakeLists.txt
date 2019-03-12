@@ -1,0 +1,5 @@
+PROJECT(hello)
+SET(SRC_LIST main.cpp)
+#SET(SRC_LIST net_layer_forward.cpp)
+add_compile_options(-std=c++11)
+ADD_EXECUTABLE(hello ${SRC_LIST})
