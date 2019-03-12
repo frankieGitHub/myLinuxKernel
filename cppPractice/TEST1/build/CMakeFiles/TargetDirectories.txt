@@ -1,0 +1,3 @@
+/home/coolpad/AI/myAIGithub/myLinuxKernel/cppPractice/TEST1/build/CMakeFiles/rebuild_cache.dir
+/home/coolpad/AI/myAIGithub/myLinuxKernel/cppPractice/TEST1/build/CMakeFiles/edit_cache.dir
+/home/coolpad/AI/myAIGithub/myLinuxKernel/cppPractice/TEST1/build/CMakeFiles/hello.dir
