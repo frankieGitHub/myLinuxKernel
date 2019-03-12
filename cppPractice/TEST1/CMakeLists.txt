@@ -1,3 +1,4 @@
+cmake_minimum_required(VERSION 3.11)
 PROJECT(hello)
 SET(SRC_LIST main.cpp)
 #SET(SRC_LIST net_layer_forward.cpp)

@@ -67,6 +67,8 @@ int Cup::drinkWater(int o)
     waterLeft = waterLeft - o;
     cout << "drinking water..." << endl;
     cout << "water left is: " << waterLeft << endl;
+
+    return 0;
 }
 
 class MyCup : public Cup
@@ -102,11 +104,13 @@ MyCup::~MyCup()
 int MyCup::turnON()
 {
     cout << "do sth to turn on the cover" << endl;
+    return 0;
 }
 
 int MyCup::turnOFF()
 {
     cout << "do sth to turn OFF the cover" << endl;
+    return 0;
 }
 
 int MyCup::drinkWater(int o)
@@ -121,6 +125,8 @@ int MyCup::drinkWater(int o)
     cout << "My cup drink water...." << endl;
     cout << "water left: " << waterLeft  << endl;
     turnOFF();
+
+    return 0;
 }
 
 int main()
