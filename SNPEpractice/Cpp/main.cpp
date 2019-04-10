@@ -6,7 +6,13 @@
 #include "DlSystem/DlEnums.hpp"
 #include "DlSystem/String.hpp"
 #include "DlContainer/IDlContainer.hpp"
+#include "SNPE/SNPEBuilder.hpp"
+#include "udlExample.hpp"
 
+#ifdef ANDROID
+#include <GLES2/gl2.h>
+#include "CreateGLBuffer.hpp"
+#endif
 
 using namespace std;
 
@@ -45,7 +51,28 @@ int main()
         return -1;
     }
 
+    zdl::DlSystem::UDLFactoryFunc udlFunc = sample::MyUDLFactory;
+    zdl::DlSystem::UDLBundle udlBundle;
+    udlBundle.cookie = (void*)0xdeadbeaf, udlBundle.func = udlFunc;
 
+    zdl::DlSystem::PlatformConfig platformConfig;
+
+
+    unique_ptr<zdl::SNPE::SNPE> snpe;
+    zdl::SNPE::SNPEBuilder snpeBuilder(container.get());
+
+    snpe = snpeBuilder.setOutputLayers({})
+        .setRuntimeProcessor(runtime)
+        .setUdlBundle(udlBundle)
+        .setPlatformConfig(platformConfig)
+        .setUseUserSuppliedBuffers(false)
+        .setInitCacheMode(false)
+        .build();
+
+    if (snpe == nullptr) {
+        cout << "building snpe obj err" << endl;
+        return -1;
+    }
 
     cout << "hello222" << endl;
     return 0;

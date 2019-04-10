@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.11)
 PROJECT(SNPEobjDetector)
-SET(SRC_LIST main.cpp)
+SET(SRC_LIST main.cpp udlExample.cpp)
 #SET(SRC_LIST net_layer_forward.cpp)
 
 if(UNIX AND NOT ANDROID)
