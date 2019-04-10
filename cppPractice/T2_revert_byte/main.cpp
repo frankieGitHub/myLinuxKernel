@@ -46,14 +46,13 @@ template <class T>
 T revT(T t)
 {
     T tOut = 0;
-    printf("template input is: %x\n", t);
 
-    for(int i=0; i < sizeof(T)*8; i++)
+    for(int i=0; i<sizeof(T)*8; i++)
     {
-        if(t & (1<<i))
-          tOut |= (1<<(sizeof(T)*8 -1 - i));
+        if(t&(1<<i))
+          tOut |= 1 << (sizeof(T)*8-1-i);
     }
-    printf("template onput is: %x\n", tOut);
+
     return tOut;
 }
 
@@ -78,7 +77,6 @@ int main()
 
     unsigned int in2 = 0x8A;
     revT(in2);
-
 
     return 0;
 }
